@@ -82,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'user',
         'USER': 'root',
-        'PASSWORD': 'chenqixin123',
+        'PASSWORD': '',
         'HOST': '127.0.0.1',
         'PORT': 3306,
     }
@@ -139,7 +139,7 @@ EMAIL_PORT = 25
 # 发送邮件的邮箱，需要配置开通SMTP
 EMAIL_HOST_USER = '1943432515@qq.com'
 # 在邮箱中设置的客户端授权密码
-EMAIL_HOST_PASSWORD = 'muanyxmiwjjadgdi'
+EMAIL_HOST_PASSWORD = ''
 # 收件人看到的发件人
 EMAIL_FROM = 'lyj<167616915@qq.com>'
 # 这⾥必须是True，否则发送不成功
