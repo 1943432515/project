@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>充值</title>
+</head>
+<body>
+<form action="/add/" method="post">
+    {% csrf_token %}
+	<div>
+            <input type="text" placeholder="金额" name="money">
+	</div>
+    <button type="submit">充值</button>
+    <a href="/wallet/">返回</a>
+</form>
+<br>
+</body>
+</html>

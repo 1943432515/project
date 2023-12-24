@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改</title>
+</head>
+<body>
+<h1>商品信息修改</h1>
+<form action='/good_change/' method='post' enctype="multipart/form-data">
+{% csrf_token %}
+<div>
+    <br>
+    商品名称：<input type="text" name='good_name'>
+    <br>
+    商品图片：<input type='file' name='good_image'>
+    <br>
+    商品价格：<input type="text" name='price'>
+    <br>
+    <label for="story">详细介绍:</label>
+    <br>
+    <textarea id="story" name="introduction"></textarea>
+    <br>
+    库存数量：<input type="text" name='number'>
+    <br>
+    分类标签:<input type="text" name="label">
+    <br>
+    <input type='submit' name="修改">
+</div>
+</form>
+<br>
+<a href="/shop/">返回</a>
+</body>
+</html>

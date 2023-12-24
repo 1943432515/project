@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改信息</title>
+</head>
+<body>
+<form action="/change/" method="post" style="width:100%;height:100%">
+    {% csrf_token %}
+	<div class="change-box">
+            <div class="title">修改信息</div>
+            <input type="text" placeholder="姓名" name="name">
+            <br>性别:
+            <br><input type="checkbox" name="male" >男
+            <br><input type="checkbox" name="female" >女
+            <br><input type="text" placeholder="邮箱" name="email">
+            <br><input type="text" placeholder="电话号码" name="tel_number">
+            <br><input type="text" placeholder="地址" name="address">
+            <br><input type="password" placeholder="密码" name="password">
+        <button type="submit">放置</button><a href="/info/">返回</a>
+            <br>
+            <br>
+        {{ information }}
+	</div>
+</form>
+
+</body>
+</html>

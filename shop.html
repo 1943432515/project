@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>店铺</title>
+</head>
+<body>
+<h1>欢迎回到店铺</h1>
+<br>
+<br>
+{% for good in good_list %}
+    <br>
+    {{ good.0 }}
+    <br>
+    <img src='/{{good.1}}' alt='无' width='50' height='50'>
+    <br>
+    价格：{{ good.2 }}
+    <br>
+    介绍：{{ good.3 }}
+    <br>
+    库存：{{ good.4 }}
+    <br>
+    标签：{{ good.5 }}
+    <br>
+    状态：{{ good.6 }}
+    <br>
+    <form action="/shop/" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="ON" value={{ good.0 }}>
+        <button name="on" type="submit" >上架</button>
+    </form>
+        <form action="/shop/" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="OFF" value={{ good.0 }}>
+        <button name="off" type="submit" >下架</button>
+    </form>
+    <br>
+    <a href="/good_change/">修改商品信息</a>
+    <br>
+    <form action="/shop/" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="delete" value={{ good.0 }}>
+        <button name="sc" type="submit" >删除</button>
+    </form>
+    <br>
+{% endfor %}
+<a href="/add_goods/">添加商品</a>
+</body>
+</html>

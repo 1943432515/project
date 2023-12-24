@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>卖家注册</title>
+</head>
+<body>
+<h1>卖家注册</h1>
+<form action="/seller_register/" method="post">
+    {% csrf_token %}
+	<div>
+            <input type="text" placeholder="用户名" name="username">
+            <br>
+            <input type="text" placeholder="身份证号" name="id_number">
+            <br>
+            <input type="text" placeholder="邮箱" name="email">
+            <br>
+            <input type="password" placeholder="密码" name="password">
+            <br>
+            <input type="password" placeholder="再次输入密码" name="re_password">
+            <br>
+            <button type="submit">注册</button>
+	</div>
+</form>
+<a href="/seller_login/">返回</a>
+<br>
+{{ information }}
+
+</body>
+</html>

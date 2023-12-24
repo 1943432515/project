@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>卖家登录</title>
+</head>
+<body>
+<h1>卖家登录</h1>
+<form action="/seller_login/" method="post">
+    {% csrf_token %}
+	<div>
+            <input type="text" placeholder="用户名" name="username">
+            <input type="password" placeholder="密码" name="password">
+	</div>
+    <div>
+        {{ login_form.captcha }}
+    </div>
+    <button type="submit">登录</button>
+    <span>没有账号？<a href="/seller_register/" style="text-decoration:none;">去注册</a></span>
+</form>
+<br>
+{{ information }}
+</body>
+</html>

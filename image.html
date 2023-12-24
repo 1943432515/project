@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>头像</title>
+</head>
+<body>
+账户名：{{ name }}
+<br>
+<form action='/image/' method='post' enctype="multipart/form-data">
+{% csrf_token %}
+头像：<input type='file' name='image'>
+<input type='submit'>
+</form>
+<br>
+{% if id %}
+    <a href="/individual_center1/" style="text-decoration:none;">返回</a>
+{% else %}
+    <a href="/individual_center/" style="text-decoration:none;">返回</a>
+{% endif %}
+</body>
+</html>

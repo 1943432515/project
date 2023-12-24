@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本信息</title>
+</head>
+<body>
+<h1>基本信息</h1>
+<br>
+<div>
+    账号：{{ username }}
+</div>
+<div>
+    真实姓名：{{ name }}
+</div>
+<div>
+    性别：{{ gender }}
+</div>
+<div>
+    邮箱：{{ email }}
+</div>
+<div>
+    密码：不显示
+</div>
+<div>
+    电话号码：{{ tel_number }}
+</div>
+<div>
+    地址：{{ address }}
+</div>
+{% if id %}
+    身份证号：{{ id_number|truncatechars:2 }}
+{% endif %}
+<br>
+<a href="/change/" style="text-decoration:none;">修改信息</a>
+{% if id %}
+    <a href="/individual_center1/" style="text-decoration:none;">返回</a>
+{% else %}
+    <a href="/individual_center/" style="text-decoration:none;">返回</a>
+{% endif %}
+</body>
+</html>
